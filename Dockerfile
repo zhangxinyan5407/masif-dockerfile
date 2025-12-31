@@ -2,11 +2,7 @@
 # We use the keyword 'FROM' to do that.
 # In our example, we want import the python image.
 # So we write 'python' for the image name and 'latest' for the version.
-# 替换整个 FROM 行
-FROM python:3.9-slim
-
-# 安装 pymesh
-RUN pip install pymesh2 -i https://pypi.tuna.tsinghua.edu.cn/simple
+FROM docker.mirrors.ustc.edu.cn/pymesh/pymesh:latest
 
 # In order to launch our python code, we must import it into our image.
 # We use the keyword 'COPY' to do that.
